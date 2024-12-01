@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Minimal inline CSS for the initial structure */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        nav {
+            background-color: #0078d4;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <!-- <li><a href="biodata.html" class="active">Bio-data</a></li> -->
+        </ul>
+    </nav>
+
+    <div id="biodata-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Bio-data</h1>
+            <p>Personal and Professional Information</p>
+        </header>
+
+        <!-- Personal Information Section -->
+        <section class="personal-info">
+            <h2>Personal Information</h2>
+            <ul>
+                <li><strong>Name:</strong> Shivagni AR</li>
+                <li><strong>Date of Birth:</strong> 05th January 2000</li>
+                <li><strong>Gender:</strong> Male</li>
+                <li><strong>Nationality:</strong> Indian</li>
+                <li><strong>Marital Status:</strong> Single</li>
+                <li><strong>Contact:</strong> 7760564518</li>
+                <li><strong>Email:</strong> shivagniargowda518@gmail.com</li>
+            </ul>
+        </section>
+
+        <!-- Professional Information Section -->
+        <section class="professional-info">
+            <h2>Professional Information</h2>
+            <ul>
+                <li><strong>Field:</strong> Computer Science and Engineering</li>
+                <!-- <li><strong>Specialization:</strong> MERN Stack Development</li> -->
+                <li><strong>Skills:</strong> Leadership, Problem-solving, Programming</li>
+                <li><strong>Languages Known:</strong> English, Hindi, Kannada, Tulu</li>
+            </ul>
+        </section>
+
+        <!-- Declaration Section -->
+        <section class="declaration">
+            <h2>Declaration</h2>
+            <p>
+                I hereby declare that the above-mentioned details are true to the best of my knowledge and belief.
+            </p>
+            <p class="signature">Shivagni AR</p>
+        </section>
+    </div>
+
+    <script>
+        // Add styling and animations using jQuery
+        $(document).ready(function () {
+            // Style the header dynamically
+            $("header").css({
+                "text-align": "center",
+                "padding": "20px",
+                "background-color": "#0078d4",
+                "color": "white",
+                "border-radius": "8px",
+                "margin-bottom": "20px"
+            });
+
+            $("header h1").css({
+                "font-size": "2.5em",
+                "margin": "0"
+            });
+
+            $("header p").css({
+                "font-size": "1.2em",
+                "margin": "5px 0"
+            });
+
+            // Add hover effects to navigation links
+            $("nav ul li a").hover(
+                function () {
+                    $(this).css("color", "#ffcc00");
+                },
+                function () {
+                    $(this).css("color", "white");
+                }
+            );
+
+            // Style sections dynamically
+            $(".personal-info, .professional-info, .declaration").css({
+                "margin": "20px 0",
+                "padding": "15px",
+                "background-color": "#f1f8ff",
+                "border-left": "4px solid #0078d4",
+                "border-radius": "8px",
+                "box-shadow": "0 2px 4px rgba(0,0,0,0.1)"
+            });
+
+            // Style headings dynamically
+            $(".personal-info h2, .professional-info h2, .declaration h2").css({
+                "font-size": "1.8em",
+                "color": "#003d80",
+                "margin-bottom": "10px",
+                "border-bottom": "2px solid #0078d4",
+                "padding-bottom": "5px"
+            });
+
+            // Style list items dynamically
+            $(".personal-info ul li, .professional-info ul li").css({
+                "font-size": "1.2em",
+                "color": "#333",
+                "margin": "10px 0"
+            });
+
+            $(".personal-info ul li strong, .professional-info ul li strong").css({
+                "color": "#003d80"
+            });
+
+            // Style the declaration signature
+            $(".declaration .signature").css({
+                "font-size": "1.2em",
+                "color": "#003d80",
+                "text-align": "right",
+                "font-weight": "bold"
+            });
+
+            // Add fade-in animation to all sections
+            $(".personal-info, .professional-info, .declaration").hide().fadeIn(1500);
+        });
+    </script>
+</body>
+</html>

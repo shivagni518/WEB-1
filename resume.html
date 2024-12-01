@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Minimal inline CSS for the initial structure */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        nav {
+            background-color: #0078d4;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #0078d4;
+    object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home&nbsp&nbsp</a></li><br>
+            <!-- <li><a href="resume.html">Resume</a></li> -->
+            <li><a href="biodata.html" class="active">Bio-data</a></li>
+        </ul>
+    </nav>
+
+    <div id="resume-container">
+        <!-- Header Section -->
+        <header>
+            <h1>My Resume</h1>
+            <p>Personal, Academic, and Professional Highlights</p>
+        </header>
+        <div class="profile-pic">
+            <img src="VA IMG JPG.jpeg" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h1>Shivagni A R</h1>
+            <p class="contact">7760564518</p>
+            <p class="email">shivgniargowda518@gmail.com</p>
+        </div>
+
+        <!-- Objective Section -->
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>
+                I aim to secure a challenging position in the field of software engineering where I can apply my skills 
+                and contribute to organizational success.
+            </p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Year</th>
+                        <th>Institution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BE</td>
+                        <td>Present</td>
+                        <td>Canara Engineering College</td>
+                    </tr>
+                    <tr>
+                        <td>12th</td>
+                        <td>2021</td>
+                        <td>Vivekananda PU College,Puttur</td>
+                    </tr>
+                    <tr>
+                        <td>10th</td>
+                        <td>2019</td>
+                        <td>Sandeepani English Medium School,Puttur</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <!-- <li>MERN Stack Development</li> -->
+                <li>Leadership and Team Management</li>
+                <li>Problem-Solving and Critical Thinking</li>
+                <li>Proficiency in HTML, CSS, JavaScript</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Using jQuery for styling and interactivity
+        $(document).ready(function () {
+            // Dynamic header styling
+            $("header").css({
+                "text-align": "center",
+                "padding": "20px",
+                "background-color": "#0078d4",
+                "color": "white",
+                "border-radius": "8px",
+                "margin-bottom": "20px"
+            });
+
+            $("header h1").css({
+                "font-size": "2.5em",
+                "margin": "0"
+            });
+
+            $("header p").css({
+                "font-size": "1.2em",
+                "margin": "5px 0"
+            });
+
+            // Add hover effect for navigation links
+            $("nav ul li a").hover(
+                function () {
+                    $(this).css("color", "#ffcc00");
+                },
+                function () {
+                    $(this).css("color", "white");
+                }
+            );
+
+            // Style sections dynamically
+            $("section").css({
+                "margin": "20px 0",
+                "padding": "15px",
+                "background-color": "#f1f8ff",
+                "border-left": "4px solid #0078d4",
+                "border-radius": "8px",
+                "box-shadow": "0 2px 4px rgba(0,0,0,0.1)"
+            });
+
+            // Dynamic heading styling
+            $("section h2").css({
+                "font-size": "1.8em",
+                "color": "#003d80",
+                "margin-bottom": "10px",
+                "border-bottom": "2px solid #0078d4",
+                "padding-bottom": "5px"
+            });
+
+            // Dynamic table styling
+            $("table").css({
+                "width": "100%",
+                "border-collapse": "collapse",
+                "margin": "15px 0"
+            });
+
+            $("table th, table td").css({
+                "border": "1px solid #ddd",
+                "padding": "8px",
+                "text-align": "left"
+            });
+
+            $("table th").css({
+                "background-color": "#0078d4",
+                "color": "white",
+                "font-weight": "bold"
+            });
+
+            // Skill list styling
+            $("ul li").css({
+                "font-size": "1.2em",
+                "color": "#333",
+                "margin": "10px 0"
+            });
+
+            // Fade-in animation for sections
+            $("section").hide().fadeIn(1500);
+        });
+    </script>
+</body>
+</html>
